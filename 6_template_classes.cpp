@@ -4,7 +4,7 @@
 using namespace std;
 
 
-// We will use a template of type T in our class
+// We will use a template of type T in our class three_d_array
 template<class T>
 class three_d_array
 {
@@ -29,6 +29,12 @@ public:
 		vec.resize(width * height * length);
 	}
 
+	// Here we use abstraction and encapsulation 
+	// (2 of the 4 pillars of object oriented programming)
+	// to hide the details inside of the class 
+	// As far as the user of the class knows, it all boils
+	// down to using a triplet of indices, regardless of how
+	// it's actually stored in the class
 	void set_value(size_t src_x, size_t src_y, size_t src_z, T value)
 	{
 		if (src_x >= width || src_y >= height || src_z >= length)
