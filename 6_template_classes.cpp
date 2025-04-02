@@ -1,4 +1,5 @@
 #include <iostream>
+#include <exception>
 #include <vector>
 using namespace std;
 
@@ -31,7 +32,7 @@ public:
 	void set_value(size_t src_x, size_t src_y, size_t src_z, T value)
 	{
 		if (src_x >= width || src_y >= height || src_z >= length)
-			throw std::out_of_range("Out of bounds");
+			throw out_of_range("Out of bounds");
 
 		// Convert 3D indices to 1D index
 		const size_t index = src_z * width * height + src_y * width + src_x;
@@ -42,7 +43,7 @@ public:
 	T get_value(size_t src_x, size_t src_y, size_t src_z)
 	{
 		if (src_x >= width || src_y >= height || src_z >= length)
-			throw std::out_of_range("Out of bounds");
+			throw out_of_range("Out of bounds");
 
 		// Convert 3D indices to 1D index
 		const size_t index = src_z * width * height + src_y * width + src_x;
