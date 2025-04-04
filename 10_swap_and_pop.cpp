@@ -84,7 +84,6 @@ int main(void)
     // If the order does not matter, then use what's called 'swap and pop'
     // where the first and last elements are swapped before the
     // last element is discarded via pop_back
-    vector<dougs_class>::iterator vi2 = input_vec2.begin();
     while (input_vec2.size() > 0)
     {
         swap(input_vec2[0], input_vec2[input_vec2.size() - 1]);
