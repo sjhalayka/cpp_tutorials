@@ -8,7 +8,15 @@ using namespace std;
 template<class T>
 class three_d_array
 {
+protected:
+
+	// These are member variables for the three_d_array class
+	size_t width, height, length;
+	vector<T> vec;
+
 public:
+
+	// These are member functions for the three_d_array class
 	three_d_array(void)
 	{
 		width = height = length = 0;
@@ -71,10 +79,6 @@ public:
 	{
 		return length;
 	}
-
-protected:
-	size_t width, height, length;
-	vector<T> vec;
 };
 
 
